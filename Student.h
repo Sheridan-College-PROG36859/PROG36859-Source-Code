@@ -50,6 +50,8 @@ public:
     // Example of a functor implemented in the CPP
     int operator ()(int age);
 
+    inline const std::string& GetName() { return name_; }
+
     void Display();
 };
 
