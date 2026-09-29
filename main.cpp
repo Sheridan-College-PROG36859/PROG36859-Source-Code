@@ -1,72 +1,43 @@
 #include <iostream>
 #include "Student.h"
+#include "Vehicle.h"
+#include "Bike.h"
+#include "Truck.h"
 
-class Temp
+// Forward declare the function VectorExamples. The compiler will compile the VectorExamples.cpp
+// and will link the function there to the one we call in the main.
+void VectorExamples();
+
+
+// This demonstrates the order of constructor/destructor calls
+// We create the truck and bike as heap-allocated objects, and we delete them before
+// we leave the function, otherwise we will leak memory!
+void ConstructorDestructorExamples()
 {
-    int value = 0;
-};
+    std::cout << "This demonstrates the order of constructor/destructor calls" << std::endl;
 
-class Rectangle
-{
-    int length_ = 0;
-    int width_ = 0;
+    // Create a Truck
+    Vehicle* truck = new Truck();
+    std::cout << "Truck Has Engine: " << truck->HasEngine() << std::endl;
 
-public:
-    Rectangle(int length, int width)
-    {
-        length_ = length;
-        width_ = width;
-    }
+    std::cout << "Test " << std::endl;
 
-    // Overloading ++ operator.
-    void operator++(int)
-    {
-        length_++;
-        width_++;
-    }
-    
-    inline Rectangle operator +(const Rectangle& rhs)
-    {
-        return Rectangle(length_ + rhs.length_, width_ + rhs.width_);
-    }
+    // Create a Bike
+    Vehicle* bike = new Bike();
+    std::cout << "Bike Has Engine: " << bike->HasEngine() << std::endl;
 
-    inline Rectangle operator =(const float& value)
-    {
-        return Rectangle(value, value);
-    }
-
-    inline Rectangle operator +(const float value)
-    {
-        return Rectangle(value + length_, value + width_);
-    }
-    
-    friend inline float operator +(const float value, const Rectangle& rhs)
-    {
-        return value + rhs.length_ + value + rhs.width_;
-    }
-
-    // inline Rectangle operator +(const float value)
-    // {
-    //     return Rectangle(length_ + value, width_ + value);
-    // }
-
-    friend Rectangle operator +(const Rectangle& lhs, const Rectangle& rhs)
-    {
-        return Rectangle(lhs.length_ + rhs.length_, lhs.width_ + rhs.width_);
-    }
-};
+    // Now that we have stored the bike and 
+    delete truck;
+    delete bike;
+}
 
 int main()
 {
-    Student Student;
-    Rectangle r1(1, 1);
-    Rectangle r2(2, 2);
+    // Invoke our Constructor/Destructor example
+    ConstructorDestructorExamples();
 
-    r1++;
-
-    r2 = 3.2f + r1;
-
-    float f = (2.0f + r1);
-
+    // Ivoke the Vector Example code that is in the VectorExamples.cpp file
+    VectorExamples();
+    
     return 0;
 }

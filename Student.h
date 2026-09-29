@@ -12,6 +12,8 @@ class Student
 
 public:
     Student();
+
+    void Display();
 };
 
 #endif
