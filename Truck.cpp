@@ -9,3 +9,9 @@ Truck::~Truck()
 {
     std::cout << "Truck Destroyed" << std::endl;
 }
+
+bool Truck::HasEngine()
+{
+    return true;
+}
+

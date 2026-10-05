@@ -19,7 +19,7 @@ public:
 
     virtual ~Vehicle();
 
-    virtual bool HasEngine();
+    virtual bool HasEngine() = 0;
     virtual void DoSomething(int temp) {};
 };
 

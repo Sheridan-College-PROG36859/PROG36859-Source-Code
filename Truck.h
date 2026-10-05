@@ -11,6 +11,8 @@ class Truck : public Vehicle
 public:
     Truck();
     ~Truck();
+
+    bool HasEngine() override;
 };
 
 #endif
