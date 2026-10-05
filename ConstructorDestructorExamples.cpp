@@ -3,6 +3,16 @@
 #include "Bike.h"
 #include "Truck.h"
 
+// In this function we can see how calling constructors will work.
+// The important part to this function is to look at the constructors
+// themselves and using the debugger to step through how an object
+// is created.
+void CallingConstructors()
+{
+    Bike *bike2 = new Bike();
+    Bike *bike = new Bike(2, "Red");
+}
+
 // This demonstrates the order of constructor/destructor calls
 // We create the truck and bike as heap-allocated objects, and we delete them before
 // we leave the function, otherwise we will leak memory!

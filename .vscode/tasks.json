@@ -13,6 +13,7 @@
                 "${workspaceFolder}\\Vehicle.cpp",
                 "${workspaceFolder}\\VectorExamples.cpp",
                 "${workspaceFolder}\\ConstructorDestructorExamples.cpp",
+                "${workspaceFolder}\\CPPAbstract.cpp",
                 "-o",
                 "${fileDirname}\\main.exe"
             ],

@@ -12,6 +12,7 @@ class Bike : public Vehicle
     
 public:
     Bike();
+    Bike(int numWheels, const std::string& colour);
     ~Bike();
 
     bool HasEngine() override;

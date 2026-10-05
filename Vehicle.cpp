@@ -7,7 +7,7 @@ Vehicle::Vehicle()
 
 Vehicle::Vehicle(int numWheels, const std::string& colour)
 {
-    std::cout << "Vehicle Created" << std::endl;
+    std::cout << "Vehicle Created with parameters" << std::endl;
     numWheels_ = numWheels;
     colour_ = colour;
 }
