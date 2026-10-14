@@ -75,7 +75,7 @@ public:
 
     void Display()
     {
-        std::cout << value << std::endl;
+        std::cout << value_ << std::endl;
     }
 };
 
