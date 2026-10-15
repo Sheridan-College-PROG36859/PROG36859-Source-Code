@@ -17,6 +17,8 @@ void CallingConstructors();
 // VectorExamples.cpp
 void VectorExamples();
 
+void CPPOeratorOverloading();
+
 // void DoSomething(int value)
 // {
 //     value++;
@@ -28,8 +30,9 @@ void VectorExamples();
 
 int main()
 {
+    CPPOeratorOverloading();
 
-    CPPTemplates();
+    //CPPTemplates();
 
     // /CPPDiamondPattern();
     //CPPAbstract();

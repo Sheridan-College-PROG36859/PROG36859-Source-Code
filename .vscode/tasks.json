@@ -16,6 +16,7 @@
                 "${workspaceFolder}\\CPPAbstract.cpp",
                 "${workspaceFolder}\\CPPDiamondPattern.cpp",
                 "${workspaceFolder}\\CPPTemplates.cpp",
+                "${workspaceFolder}\\CPPOeratorOverloading.cpp",
                 "-o",
                 "${fileDirname}\\main.exe"
             ],
