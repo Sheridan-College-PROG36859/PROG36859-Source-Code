@@ -19,6 +19,9 @@ void VectorExamples();
 
 void CPPOeratorOverloading();
 
+// Threading
+void ThreadsExample();
+
 // void DoSomething(int value)
 // {
 //     value++;
@@ -30,7 +33,9 @@ void CPPOeratorOverloading();
 
 int main()
 {
-    CPPOeratorOverloading();
+    ThreadsExample();
+
+    //CPPOeratorOverloading();
 
     //CPPTemplates();
 
