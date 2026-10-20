@@ -26,3 +26,18 @@ bool Bike::HasEngine()
 {
     return false;
 }
+
+void Bike::Display()
+{
+    Vehicle::Display();
+
+    std::cout << "Bike details" << std::endl;
+    if (gears != nullptr)
+    {
+        std::cout << "Bike has gears" << std::endl;
+    }
+    else
+    {
+        std::cout << "Bike does not have" << std::endl;
+    }
+}

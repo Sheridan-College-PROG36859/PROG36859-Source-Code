@@ -16,6 +16,7 @@ public:
     ~Bike();
 
     bool HasEngine() override;
+    void Display() override;
 };
 
 #endif

@@ -21,6 +21,7 @@ public:
 
     virtual bool HasEngine() = 0;
     virtual void DoSomething(int temp) {};
+    virtual void Display();
 };
 
 #endif

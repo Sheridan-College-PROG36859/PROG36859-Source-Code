@@ -13,6 +13,7 @@ public:
     ~Truck();
 
     bool HasEngine() override;
+    void Display() override;
 };
 
 #endif

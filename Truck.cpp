@@ -15,3 +15,9 @@ bool Truck::HasEngine()
     return true;
 }
 
+void Truck::Display()
+{
+    Vehicle::Display();
+
+    std::cout << "Truck details.... but doesn't have any" << std::endl;
+}
