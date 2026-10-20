@@ -68,12 +68,30 @@ public:
         os << "Rect Length " << rhs.length_ << std::endl;
         return os;
     }
+
+    Rectangle& operator++(int)
+    {
+        this->width_ += 1.0f;
+        this->length_ += 1.0f;
+        return *this;
+    }
+
+    Rectangle& operator+=(const float rhs)
+    {
+        this->width_ += rhs;
+        this->length_ += rhs;
+        return *this;
+    }
 };
 
 void CPPOeratorOverloading()
 {
     Rectangle rect1(5, 10);
     Rectangle rect2(20, 50);
+
+    rect1++;
+    rect1 += 5.0f;
+    //rect1 += rect1;
 
     // rect1.operator+(rect2)
     Rectangle rect3 = rect1 + rect2;
